@@ -16,6 +16,9 @@ import java.util.List;
  * @date 2018年4月24日 上午10:43:34  
  */
 public class Test {
+	
+	public static ThreadLocal<String> stringLocal = new ThreadLocal<String>();
+	public static ThreadLocal<Integer> integerLocal = new ThreadLocal<Integer>();
 
 	public static void main(String[] args) {
 		List<String> stringList = new ArrayList<String>();
@@ -28,6 +31,12 @@ public class Test {
 		Test2<Integer> t2 = new Test2Impl<Integer>();
 		
 		System.out.println("dd");
+		
+		stringLocal.set("hello");
+		integerLocal.set(123);
+		
+		System.out.println(stringLocal.get());
+		System.out.println(integerLocal.get());
 	}
 }
 
