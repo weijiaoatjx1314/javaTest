@@ -26,6 +26,8 @@ public class Test {
 		Test1<String> t = new Test1<String>("hello");
 		
 		Test2<Integer> t2 = new Test2Impl<Integer>();
+		
+		System.out.println("dd");
 	}
 }
 
